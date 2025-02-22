@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bench Project</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #17A4C7;
+            text-align: center;
+            color: white;
+        }
+        .logo img {
+            max-width: 200px;
+        }
+        .social-links {
+            margin: 20px 0;
+        }
+        .social-links a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+        .social-links img {
+            width: 50px;
+            height: 50px;
+            transition: transform 0.3s ease;
+        }
+        .social-links img:hover {
+            transform: scale(1.2);
+        }
+        .footer-links {
+            margin-top: 20px;
+        }
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+            transition: opacity 0.3s ease;
+        }
+        .footer-links a:hover {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="logo.png" alt="The Bench Project Logo">
+    </div>
+    
+    <div class="social-links">
+        <a href="#" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
+        <a href="#" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
+        <a href="#" target="_blank"><img src="tiktok-icon.png" alt="TikTok"></a>
+        <a href="#" target="_blank"><img src="pinterest-icon.png" alt="Pinterest"></a>
+        <a href="#" target="_blank"><img src="x-icon.png" alt="X (Twitter)"></a>
+        <a href="#" target="_blank"><img src="bluesky-icon.png" alt="BlueSky"></a>
+        <a href="#" target="_blank"><img src="reddit-icon.png" alt="Reddit"></a>
+        <a href="#" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+    </div>
+    
+    <div class="footer-links">
+        <a href="privacy-policy.html" target="_blank">Privacy Policy</a>
+        <a href="terms-of-service.html" target="_blank">Terms of Service</a>
+    </div>
+</body>
+</html>
