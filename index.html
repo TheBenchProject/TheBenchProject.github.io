@@ -38,15 +38,21 @@
 
         .ticker-content {
             display: flex;
-            gap: 30px; /* Controls space between bullet points */
+            align-items: center;
             min-width: 100%;
-            animation: tickerScroll 30s linear infinite;
+            animation: tickerScroll 15s linear infinite;
         }
 
         .ticker-content span {
             display: flex;
             align-items: center;
-            gap: 30px; /* Spaces text from bullet */
+            padding: 0 20px; /* Equal spacing on both sides */
+        }
+
+        .ticker-content span::before {
+            content: "•";  /* Add bullet point */
+            margin-right: 10px; /* Space between bullet and text */
+            margin-left: 10px; /* Equal space on the left */
         }
 
         @keyframes tickerScroll {
@@ -125,7 +131,7 @@
     <script>
         // List of sentences
         const messages = [
-            "Welcome to The Bench Project",
+            "Welcome to The Bench Project1",
             "Find benches near you!",
             "Share your favorite spots!",
             "Follow us on social media!",
@@ -136,8 +142,8 @@
             const ticker = document.getElementById("ticker-text");
 
             // Create ticker content twice for seamless looping
-            let content = messages.map(msg => `<span>  •  ${msg}</span>`).join(" ");
-            ticker.innerHTML = content + " " + content; // Doubled for infinite scrolling
+            let content = messages.map(msg => `<span>${msg}</span>`).join("");
+            ticker.innerHTML = content + content; // Doubled for infinite scrolling
         }
 
         updateTicker();
