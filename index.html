@@ -17,10 +17,10 @@
             background-color: #17A4C7;
             text-align: center;
             color: white;
-            overflow: hidden; /* Prevents horizontal scrolling */
+            overflow: hidden;
         }
 
-        /* Ticker Tape Styles */
+        /* Ticker Tape */
         .ticker-container {
             width: 100%;
             background-color: #128BA8;
@@ -32,30 +32,35 @@
             padding: 10px 0;
             font-size: 18px;
             font-weight: bold;
+            display: flex;
+            align-items: center;
         }
 
         .ticker-content {
-            display: inline-block;
+            display: flex;
+            gap: 30px; /* Controls space between bullet points */
+            min-width: 100%;
             animation: tickerScroll 15s linear infinite;
-            padding-left: 100%; /* Start off-screen */
+        }
+
+        .ticker-content span {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Spaces text from bullet */
         }
 
         @keyframes tickerScroll {
             from {
-                transform: translateX(100%);
+                transform: translateX(0);
             }
             to {
-                transform: translateX(-100%);
+                transform: translateX(-50%);
             }
-        }
-
-        .ticker-content span {
-            margin: 0 20px; /* Spacing between items */
         }
 
         .logo img {
             max-width: 200px;
-            margin-top: 50px; /* Push down to avoid overlap */
+            margin-top: 50px;
         }
 
         .social-links {
@@ -102,7 +107,7 @@
     </div>
 
     <div class="logo">
-        <img src="docs/logo.png" alt="The Bench Project Logo">
+        <img src="docs/Bench Logo no bg.png" alt="The Bench Project Logo">
     </div>
     
     <div class="social-links">
@@ -118,7 +123,7 @@
     </div>
 
     <script>
-        // List of sentences to display in the ticker
+        // List of sentences
         const messages = [
             "Welcome to The Bench Project",
             "Find benches near you! 🏙️",
@@ -127,13 +132,15 @@
             "Join our community today! 🌍"
         ];
 
-        // Function to update the ticker content dynamically
         function updateTicker() {
             const ticker = document.getElementById("ticker-text");
-            ticker.innerHTML = messages.map(msg => `<span>${msg} • </span>`).join(" ");
+
+            // Create ticker content twice for seamless looping
+            let content = messages.map(msg => `<span>• ${msg}</span>`).join(" ");
+            ticker.innerHTML = content + " " + content; // Doubled for infinite scrolling
         }
 
-        updateTicker(); // Initialize ticker content
+        updateTicker();
     </script>
 
 </body>
