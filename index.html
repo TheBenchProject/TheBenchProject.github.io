@@ -17,28 +17,70 @@
             background-color: #17A4C7;
             text-align: center;
             color: white;
+            overflow: hidden; /* Prevents horizontal scrolling */
         }
+
+        /* Ticker Tape Styles */
+        .ticker-container {
+            width: 100%;
+            background-color: #128BA8;
+            color: white;
+            overflow: hidden;
+            white-space: nowrap;
+            position: absolute;
+            top: 0;
+            padding: 10px 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .ticker-content {
+            display: inline-block;
+            animation: tickerScroll 15s linear infinite;
+            padding-left: 100%; /* Start off-screen */
+        }
+
+        @keyframes tickerScroll {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        .ticker-content span {
+            margin: 0 20px; /* Spacing between items */
+        }
+
         .logo img {
             max-width: 200px;
+            margin-top: 50px; /* Push down to avoid overlap */
         }
+
         .social-links {
             margin: 20px 0;
         }
+
         .social-links a {
             margin: 0 10px;
             display: inline-block;
         }
+
         .social-links img {
             width: 50px;
             height: 50px;
             transition: transform 0.3s ease;
         }
+
         .social-links img:hover {
             transform: scale(1.2);
         }
+
         .footer-links {
             margin-top: 20px;
         }
+
         .footer-links a {
             color: white;
             text-decoration: none;
@@ -46,14 +88,21 @@
             margin: 0 10px;
             transition: opacity 0.3s ease;
         }
+
         .footer-links a:hover {
             opacity: 0.7;
         }
     </style>
 </head>
 <body>
+
+    <!-- Ticker Tape -->
+    <div class="ticker-container">
+        <div class="ticker-content" id="ticker-text"></div>
+    </div>
+
     <div class="logo">
-        <img src="docs/Bench Logo no bg.png" alt="The Bench Project Logo">
+        <img src="docs/logo.png" alt="The Bench Project Logo">
     </div>
     
     <div class="social-links">
@@ -67,5 +116,25 @@
         <a href="privacy-policy.html" target="_blank">Privacy Policy</a>
         <a href="terms-of-service.html" target="_blank">Terms of Service</a>
     </div>
+
+    <script>
+        // List of sentences to display in the ticker
+        const messages = [
+            "Welcome to The Bench Project",
+            "Find benches near you! 🏙️",
+            "Share your favorite spots! 🌳",
+            "Follow us on social media! 📲",
+            "Join our community today! 🌍"
+        ];
+
+        // Function to update the ticker content dynamically
+        function updateTicker() {
+            const ticker = document.getElementById("ticker-text");
+            ticker.innerHTML = messages.map(msg => `<span>${msg} • </span>`).join(" ");
+        }
+
+        updateTicker(); // Initialize ticker content
+    </script>
+
 </body>
 </html>
