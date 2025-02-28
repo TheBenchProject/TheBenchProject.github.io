@@ -40,7 +40,7 @@
             display: flex;
             gap: 30px; /* Controls space between bullet points */
             min-width: 100%;
-            animation: tickerScroll 15s linear infinite;
+            animation: tickerScroll 30s linear infinite;
         }
 
         .ticker-content span {
@@ -126,17 +126,17 @@
         // List of sentences
         const messages = [
             "Welcome to The Bench Project",
-            "Find benches near you! 🏙️",
-            "Share your favorite spots! 🌳",
-            "Follow us on social media! 📲",
-            "Join our community today! 🌍"
+            "Find benches near you!",
+            "Share your favorite spots!",
+            "Follow us on social media!",
+            "Join our community today!"
         ];
 
         function updateTicker() {
             const ticker = document.getElementById("ticker-text");
 
             // Create ticker content twice for seamless looping
-            let content = messages.map(msg => `<span>• ${msg}</span>`).join(" ");
+            let content = messages.map(msg => `<span>  •  ${msg}</span>`).join(" ");
             ticker.innerHTML = content + " " + content; // Doubled for infinite scrolling
         }
 
