@@ -7,48 +7,49 @@
     <link rel="icon" type="image/png" href="docs/logo.png">
     <style>
         body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            height: 100vh;
-            margin: 0;
             font-family: 'Arial', sans-serif;
             background-color: #F5F5F5; /* Soft white background */
-            text-align: center;
             color: #333; /* Dark text for contrast */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
-        .content {
-            max-width: 800px;
-            margin: 20px;
+        .header {
+            background-color: #F5F5F5;
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
+            text-align: center;
             position: relative;
         }
 
-        .content h1 {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .header h1 {
+            color: #17A4C7; /* Bench Project blue */
+            margin: 0;
+            font-size: 24px;
         }
 
         .back-button {
             position: absolute;
             left: 20px;
-            top: 20px;
-            background-color: #17A4C7;
-            color: white;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: transparent;
             border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
+            color: #17A4C7;
+            font-size: 24px;
             cursor: pointer;
             text-decoration: none;
         }
 
-        .back-button:hover {
-            background-color: #128BA8;
+        .content {
+            flex: 1;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
         }
 
         .keyline {
@@ -59,28 +60,15 @@
         }
 
         .footer {
-            width: 100%;
-            background-color: #17A4C7; /* Main blue color */
+            background-color: #17A4C7; /* Bench Project blue */
             color: white;
             text-align: center;
-            padding: 20px 0;
+            padding: 10px 0;
             position: relative;
         }
 
-        .footer .logo {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-        }
-
-        .footer .logo img {
-            max-width: 50px; /* Smaller logo size */
-            width: 100%;
-            height: auto;
-        }
-
         .footer .social-links {
-            margin: 20px 0;
+            margin: 10px 0;
         }
 
         .footer .social-links a {
@@ -89,8 +77,8 @@
         }
 
         .footer .social-links img {
-            width: 50px;
-            height: 50px;
+            width: 30px;
+            height: 30px;
             transition: transform 0.3s ease;
         }
 
@@ -101,19 +89,18 @@
 </head>
 <body>
 
-    <div class="content">
-        <a href="index.html" class="back-button">Back</a>
+    <div class="header">
+        <a href="index.html" class="back-button">&larr;</a>
         <h1>Privacy Policy</h1>
+    </div>
+
+    <div class="content">
         <p>Your privacy policy content goes here...</p>
     </div>
 
     <div class="keyline"></div>
 
     <div class="footer">
-        <div class="logo">
-            <img src="docs/Bench Logo no bg.png" alt="The Bench Project Logo">
-        </div>
-        
         <div class="social-links">
             <a href="https://www.facebook.com/profile.php?id=61566290836263" target="_blank"><img src="docs/facebook-circle-fill.svg" alt="Facebook"></a>
             <a href="https://www.instagram.com/benchnearme/" target="_blank"><img src="docs/instagram-fill.svg" alt="Instagram"></a>
