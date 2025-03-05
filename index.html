@@ -46,14 +46,14 @@
         .ticker-content span {
             display: flex;
             align-items: center;
-            padding: 0 15px; Equal spacing before & after
+            padding: 0 15px; /* Equal spacing before & after */
             position: relative;
         }
 
         .ticker-content span::before {
-            content: "•";   Add bullet
+            content: "•";  /* Add bullet */
             position: absolute;
-            left: -10px;  Centered between sentences
+            left: -10px; /* Centered between sentences */
             right: auto;
         }
         
@@ -65,7 +65,8 @@
                 transform: translateX(-50%);
             }
         }
-*/
+        */
+
         .logo img {
             max-width: 200px;
             margin-top: 50px;
@@ -110,9 +111,11 @@
 <body>
 
     <!-- Ticker Tape -->
+    <!--
     <div class="ticker-container">
         <div class="ticker-content" id="ticker-text"></div>
     </div>
+    -->
 
     <div class="logo">
         <img src="docs/Bench Logo no bg.png" alt="The Bench Project Logo">
@@ -130,6 +133,7 @@
         <a href="terms-of-service.html" target="_blank">Terms of Service</a>
     </div>
 
+    <!--
     <script>
         // List of sentences
         const messages = [
@@ -150,6 +154,7 @@
 
         updateTicker();
     </script>
+    -->
 
 </body>
 </html>
