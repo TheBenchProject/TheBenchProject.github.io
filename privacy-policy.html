@@ -20,53 +20,6 @@
             overflow: hidden;
         }
 
-        /* Ticker Tape
-        .ticker-container {
-            width: 100%;
-            background-color: #128BA8;
-            color: white;
-            overflow: hidden;
-            white-space: nowrap;
-            position: absolute;
-            top: 0;
-            padding: 10px 0;
-            font-size: 18px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-        }
-
-        .ticker-content {
-            display: flex;
-            align-items: center;
-            min-width: 100%;
-            animation: tickerScroll 20s linear infinite;
-        }
-
-        .ticker-content span {
-            display: flex;
-            align-items: center;
-            padding: 0 15px; 
-            position: relative;
-        }
-
-        .ticker-content span::before {
-            content: "•";  
-            position: absolute;
-            left: -10px; 
-            right: auto;
-        }
-        
-        @keyframes tickerScroll {
-            from {
-                transform: translateX(0);
-            }
-            to {
-                transform: translateX(-50%);
-            }
-        }
-        */
-
         .logo img {
             max-width: 200px;
             width: 100%; /* Ensure the logo scales proportionally */
@@ -112,13 +65,6 @@
 </head>
 <body>
 
-    <!-- Ticker Tape -->
-    <!--
-    <div class="ticker-container">
-        <div class="ticker-content" id="ticker-text"></div>
-    </div>
-    -->
-
     <div class="logo">
         <img src="docs/Bench Logo no bg.png" alt="The Bench Project Logo">
     </div>
@@ -134,29 +80,6 @@
         <a href="privacy-policy.html" target="_blank">Privacy Policy</a>
         <a href="terms-of-service.html" target="_blank">Terms of Service</a>
     </div>
-
-    <!--
-    <script>
-        // List of sentences
-        const messages = [
-            "Welcome to The Bench Project2",
-            "Find benches near you!",
-            "Share your favorite spots!",
-            "Follow us on social media!",
-            "Join our community today!"
-        ];
-
-        function updateTicker() {
-            const ticker = document.getElementById("ticker-text");
-
-            // Create ticker content twice for seamless looping
-            let content = messages.map(msg => <span>${msg}</span>).join("");
-            ticker.innerHTML = content + content; // Doubled for infinite scrolling
-        }
-
-        updateTicker();
-    </script>
-    -->
 
 </body>
 </html>
